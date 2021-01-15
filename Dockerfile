@@ -7,4 +7,6 @@ RUN yum install -y php php-common php-opcache php-mcrypt php-cli php-gd php-curl
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 RUN yum install -y sudo wget telnet openssh-server vim git ncurses-term
-RUN yum install -y OpenSSL PDO Mbstring Tokenizer xml zip unzip curl
+RUN yum install -y php-common
+RUN yum install -y php-mbstring
+RUN yum install -y php-xml
